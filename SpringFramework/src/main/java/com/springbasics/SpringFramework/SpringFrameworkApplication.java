@@ -9,10 +9,10 @@ public class SpringFrameworkApplication {
 
 	public static void main(String[] args) {
 
-		BinarySearchImpl bs = new BinarySearchImpl(new QuickSortAlgorithm());
+//		BinarySearchImpl bs = new BinarySearchImpl(new QuickSortAlgorithm());
 
 		ApplicationContext applicationContext = SpringApplication.run(SpringFrameworkApplication.class, args);
-//		BinarySearchImpl bs = applicationContext.getBean(BinarySearchImpl.class);
+		BinarySearchImpl bs = applicationContext.getBean(BinarySearchImpl.class);
 
 		int result = bs.binarySearch(new int[]{1,2,3,4,5}, 5);
 		System.out.println(result);

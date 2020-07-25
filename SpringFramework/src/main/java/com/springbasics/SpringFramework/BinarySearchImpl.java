@@ -7,8 +7,10 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
+@Component
 public class BinarySearchImpl {
 
+    @Autowired
     private SortAlgorithm sortAlgorithm;
 
     public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
