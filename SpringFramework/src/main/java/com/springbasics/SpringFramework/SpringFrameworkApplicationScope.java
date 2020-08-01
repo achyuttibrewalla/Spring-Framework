@@ -1,6 +1,7 @@
 package com.springbasics.SpringFramework;
 
 import com.springbasics.SpringFramework.Basic.BinarySearchImpl;
+import com.springbasics.SpringFramework.Scope.AnimalDAO;
 import com.springbasics.SpringFramework.Scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,9 @@ public class SpringFrameworkApplicationScope {
 
 		LOGGER.info("{}", personDAO2);
 		LOGGER.info("{}", personDAO2.getJdbcConnection());
+
+		AnimalDAO animalDAO = applicationContext.getBean(AnimalDAO.class);
+		LOGGER.info("{}", animalDAO.getJdbcConnection());
 
 	}
 
