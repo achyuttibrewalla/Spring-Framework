@@ -24,12 +24,12 @@ public class SpringFrameworkApplicationScope {
 
 		LOGGER.info("{}", personDAO);
 		LOGGER.info("{}", personDAO.getJdbcConnection());
+		LOGGER.info("{}", personDAO.getJdbcConnection()); //returns a different instance
 
 		LOGGER.info("{}", personDAO2);
 		LOGGER.info("{}", personDAO2.getJdbcConnection());
 
-		AnimalDAO animalDAO = applicationContext.getBean(AnimalDAO.class);
-		LOGGER.info("{}", animalDAO.getJdbcConnection());
+
 
 	}
 
