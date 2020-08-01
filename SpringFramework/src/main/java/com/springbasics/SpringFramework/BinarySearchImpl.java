@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON) //Different beans will be created
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) //Different beans will be created
 public class BinarySearchImpl {
 
     @Autowired
