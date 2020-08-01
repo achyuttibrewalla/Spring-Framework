@@ -1,4 +1,4 @@
-package com.springbasics.SpringFramework;
+package com.springbasics.SpringFramework.Basic;
 
 public interface SortAlgorithm {
 
