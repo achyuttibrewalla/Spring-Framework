@@ -13,7 +13,7 @@ import javax.annotation.PreDestroy;
 import java.math.BigInteger;
 
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) //Different beans will be created
+//@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) //Different beans will be created
 public class BinarySearchImpl {
 
     Logger logger = LoggerFactory.getLogger(BinarySearchImpl.class);
@@ -37,7 +37,7 @@ public class BinarySearchImpl {
 
         int[] sortedNumbers = sortAlgorithm.sort(arr);
         System.out.println(sortAlgorithm);
-
+        logger.info("Using " + sortAlgorithm.getClass() + " to sort");
         //Search the array
         return 3;
     }
