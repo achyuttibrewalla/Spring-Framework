@@ -1,5 +1,6 @@
 package com.springbasics.SpringFramework;//package com.springbasics.SpringFramework;
 
+import com.springbasics.SpringFramework.Basic.BubbleSortAlgorithm;
 import com.springbasics.SpringFramework.XML.XMLPersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,9 +16,10 @@ public class SpringFrameworkXMLContext {
 		try (ClassPathXmlApplicationContext applicationContext =
                 new ClassPathXmlApplicationContext("applicationContext.xml")) {
 
-            XMLPersonDAO personDAO = applicationContext.getBean(XMLPersonDAO.class);
-            logger.info("{}, class", personDAO);
-            logger.info("{}", personDAO.getXMLJdbcConnection());
+		    logger.info("Beans loaded -> {}", (Object) applicationContext.getBeanDefinitionNames());
+            XMLPersonDAO xmlPersonDAO = applicationContext.getBean(XMLPersonDAO.class);
+            logger.info("{}, class", xmlPersonDAO);
+            logger.info("{}", xmlPersonDAO.getXMLJdbcConnection());
 
         }
 	}
